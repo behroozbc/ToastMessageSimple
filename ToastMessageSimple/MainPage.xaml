@@ -1,0 +1,25 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToastMessageSimple.MainPage"
+             BackgroundColor="{DynamicResource SecondaryColor}">
+
+    <ScrollView>
+        <Grid VerticalOptions="Center" RowSpacing="25" RowDefinitions="Auto,Auto,*"
+              Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
+
+
+            <Button 
+                Text="Short Time Toast"
+                Grid.Row="0"
+                SemanticProperties.Hint="See short period toast message"
+                Clicked="OnShortToast"
+                HorizontalOptions="Center" /> 
+			<Button 
+                Text="Long Time Toast"
+                Grid.Row="1"
+                SemanticProperties.Hint="See long period toast message"
+                Clicked="OnLongToast"
+                HorizontalOptions="Center" />
+        </Grid>
+    </ScrollView>
+</ContentPage>
